@@ -9,6 +9,9 @@ def index():
     response.flash = T("Hello World")
     return dict(message=T('Welcome to web2py!'))
 
+def test():
+    return dict(message=T('please work'))
+
 # ---- API (example) -----
 @auth.requires_login()
 def api_get_user_email():

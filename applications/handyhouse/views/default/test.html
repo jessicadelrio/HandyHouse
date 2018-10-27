@@ -1,0 +1,29 @@
+{{extend 'layout.html'}}
+
+{{block header}}
+<div class="jumbotron jumbotron-fluid background"
+     style="background-color: #333; color:white; padding:30px;word-wrap:break-word;">
+    <div class="container center">
+        <h1 class="display-5">/{{=request.application}}/{{=request.controller}}/{{=request.function}}</h1>
+    </div>
+</div>
+{{end}}
+<head>
+    <link rel='stylesheet' href='fullcalendar.css'/>
+    <script type='text/javascript' src='jquery-3.3.1.js'></script>
+    <script type='text/javascript' src='moment.min.js'></script>
+    <script type='text/javascript' src='fullcalendar.js'></script>
+    <script>
+        $(function() {
+
+            // page is now ready, initialize the calendar...
+
+            $('#calendar').fullCalendar({
+            // put your options and callbacks here
+            })
+        });
+    </script>
+</head>
+<body>
+    <div id='calendar'></div>
+</body>
